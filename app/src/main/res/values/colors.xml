@@ -6,7 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="purple_510">#005862</color>
-    <color name="purple_520">#027282</color>
+    <color name="purple_510">#005862</color>    //Новый цвет
+    <color name="purple_520">#027282</color>    //Новый цвет
     <color name="white">#FFFFFFFF</color>
 </resources>

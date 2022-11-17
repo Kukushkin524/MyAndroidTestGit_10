@@ -9,9 +9,9 @@ android {
     defaultConfig {
         applicationId "com.example.myandroidtestgit"
         minSdk 26   //todo Минимальный SDK
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        targetSdk 32    //Целевая версия
+        versionCode 1   //Версия моего приложения внутренняя, но используется PlayStore
+        versionName "1.0"   //Версия для пользователя
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,7 +30,7 @@ android {
         jvmTarget = '1.8'
     }
 }
-
+    // Ниже зависимости - библиотеки
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
