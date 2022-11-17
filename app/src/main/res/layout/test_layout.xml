@@ -4,11 +4,11 @@
              android:layout_height="match_parent">
 
     <TextView
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/Size_1"
             android:layout_width="wrap_content"
-            android:background="#ff8800"
-            android:textSize="20sp"
-            android:text="Какой-то текст"
+            android:background="@color/green_1"
+            android:textSize="@dimen/Size_text_1"
+            android:text="@string/Text_2"
 
     />
 

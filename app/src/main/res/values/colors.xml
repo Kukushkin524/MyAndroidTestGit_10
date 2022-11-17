@@ -9,4 +9,6 @@
     <color name="purple_510">#005862</color>    //Новый цвет
     <color name="purple_520">#027282</color>    //Новый цвет
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#ff8800</color>
+    <color name="green_1">#0ffa00</color>
 </resources>
