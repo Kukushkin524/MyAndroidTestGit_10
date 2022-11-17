@@ -2,12 +2,19 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-            android:paddingStart="20dp"
+             android:paddingStart="20dp"
              android:paddingTop="20dp">
     <View
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="#ff0000"
+
+    <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#00ff00"
+            android:layout_marginTop="20dp"
+
 
     />
 
