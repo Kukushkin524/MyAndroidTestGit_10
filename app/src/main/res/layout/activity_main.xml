@@ -1,67 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-//Компоновщик по сетке
-<LinearLayout
+        <!--Компоновщик относительного расположения и
+        относительного выравнивания-->
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         tools:context=".MainActivity"
         tools:ignore="HardcodedText">
-
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="111"
-                    android:layout_margin="4dp"
-                    android:background="#ff8888"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="222"
-                    android:layout_margin="4dp"
-                    android:background="#ff8888"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="333"
-                    android:layout_margin="4dp"
-                    android:background="#ff8888"/>
-
-        </LinearLayout>
-    <LinearLayout
+    <Button
+            android:id="@+id/center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="Center"
+            android:layout_centerInParent="true"/>
+    <View
+            android:id="@+id/topView"
+            android:layout_width="10dp"
+            android:layout_height="100dp"
+            android:background="#ff8800"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/center"/>
+
+    <View
+            android:id="@+id/bottomView"
+            android:layout_width="10dp"
+            android:layout_height="100dp"
+            android:background="#00ff88"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/center"/>
+    <View
+            android:id="@+id/leftView"
+            android:layout_width="60dp"
+            android:layout_height="10dp"
+            android:background="#0088ff"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/center"/>
+
+    <View
+            android:id="@+id/rightView"
+            android:layout_width="60dp"
+            android:layout_height="10dp"
+            android:background="#ff88ff"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/center"/>
+
+    <TextView
+            android:id="@+id/topLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="TopLeft"
+            android:textColor="@color/white"
+            android:background="#8844ee"
+            android:layout_alignTop="@id/topView"
+            android:layout_alignStart="@id/leftView"/>
+
+    <TextView
+            android:id="@+id/topRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="TopRight"
+            android:textColor="@color/white"
+            android:background="#8844ee"
+            android:layout_alignTop="@id/topView"
+            android:layout_alignEnd="@id/rightView"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Bottom Left"
+            android:textColor="@color/white"
+            android:background="#8844ee"
+            android:layout_alignBottom="@id/bottomView"
+            android:layout_alignStart="@id/leftView"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Bottom Right"
+            android:textColor="@color/white"
+            android:background="#8844ee"
+            android:layout_alignBottom="@id/bottomView"
+            android:layout_alignEnd="@id/rightView"/>
+
+    <TextView
+            android:id="@+id/topLeftParer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Top Left Parent"
+            android:textColor="@color/white"
+            android:background="#8844aa"/>
+
+    <TextView
+            android:id="@+id/topRightParer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Top Right Parent"
+            android:textColor="@color/white"
+            android:background="#774455"
+            android:layout_alignParentEnd="true"/>
+
+    <TextView
+            android:id="@+id/BottmLeftParer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Top Left Parent"
+            android:textColor="@color/white"
+            android:background="#8844aa"
+            android:layout_alignParentBottom="true"/>
+
+       <TextView
+            android:id="@+id/BottomRightParer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Top Right Parent"
+            android:textColor="@color/white"
+            android:background="#774455"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="Between 2 Views"
+            android:textColor="@color/white"
+            android:background="#774455"
+            android:layout_toEndOf="@id/topLeftParer"
+            android:layout_toStartOf="@id/topRightParer"
+            android:layout_below="@id/topLeftParer"/>
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/leftView"
+            android:layout_alignEnd="@id/rightView"
+            android:layout_below="@id/bottomView"
+            android:layout_above="@id/BottomRightParer">
 
         <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="444"
-                android:layout_margin="4dp"
-                android:background="#ff8888"/>
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:background="#8844ee"
+                android:text="Center Belween 4 Views"
+                android:gravity="center"
+                android:layout_gravity="center"/>
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="555"
-                android:layout_margin="4dp"
-                android:background="#ff8888"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="666"
-                android:layout_margin="4dp"
-                android:background="#ff8888"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+    </FrameLayout>
+</RelativeLayout>
