@@ -22,7 +22,7 @@
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
+   <TextView
             android:id="@+id/TextView_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             app:layout_constraintTop_toBottomOf="@id/TextView_1"
             app:layout_constraintWidth_percent="0.75"/>
 
-    <TextView
+   <TextView
             android:id="@+id/TextView_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -47,6 +47,72 @@
             app:layout_constraintWidth_percent="0.5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.15"/>
+<!--percent - ширина полосы
+    bias - жесткость пружины-->
 
+   <View
+            android:id="@+id/point1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@color/black"
+            android:layout_marginStart="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+   <View
+            android:id="@+id/point2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@color/black"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
+   <Space
+           android:id="@+id/pinPointLeft"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toTopOf="@id/point1"
+           app:layout_constraintStart_toEndOf="@id/point1"
+           app:layout_constraintEnd_toStartOf="@id/point2"
+           app:layout_constraintHorizontal_bias="0.1"/>
+
+   <Space
+            android:id="@+id/pinPointRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/point1"
+            app:layout_constraintStart_toEndOf="@id/point1"
+            app:layout_constraintEnd_toStartOf="@id/point2"
+            app:layout_constraintHorizontal_bias="0.9"/>
+    <!--Space - пространство-->
+
+   <TextView
+            android:id="@+id/constant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="constant 80%"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="#333fff"
+            android:paddingHorizontal="60dp"
+            android:paddingVertical="4dp"
+            app:layout_constraintTop_toTopOf="@id/point1"
+            app:layout_constraintEnd_toEndOf="@id/pinPointRight"
+            app:layout_constraintStart_toStartOf="@id/pinPointLeft"/>
+
+   <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/teal_200"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/constant"
+            app:layout_constraintStart_toStartOf="@id/constant"
+            app:layout_constraintEnd_toEndOf="@id/constant"
+            app:layout_constraintDimensionRatio="H,0.5"/>
+<!--constraintDimensionRatio="H,0.5" Зависимость высоты от ширины
+в данном случае высота равна 0,5 от ширины. H-высота W-ширина -->
 </androidx.constraintlayout.widget.ConstraintLayout>
